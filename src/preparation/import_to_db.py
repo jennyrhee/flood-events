@@ -3,7 +3,7 @@ import os
 import pandas as pd
 
 
-conn = sqlite3.connect('/Users/jenny/Documents/storm-events/data/raw/storms.db')
+conn = sqlite3.connect('data/raw/storms.db')
 c = conn.cursor()
 
 locations_pass_count = 0
@@ -14,10 +14,10 @@ for root, dirs, files in os.walk("."):
         if '.csv' in f:
             print('Starting import of:', f)
             if 'details' in f:
-                df = pd.read_csv('/Users/jenny/Documents/storm-events/data/raw/details/' + f)
+                df = pd.read_csv('data/raw/details/' + f)
                 df.to_sql('details', conn, if_exists='append', index=False)
             elif 'locations' in f:
-                df = pd.read_csv('/Users/jenny/Documents/storm-events/data/raw/locations/' + f)
+                df = pd.read_csv('data/raw/locations/' + f)
                 try:
                     df.to_sql('locations', conn, if_exists='append', index=False)
                 except sqlite3.IntegrityError:
@@ -25,7 +25,7 @@ for root, dirs, files in os.walk("."):
                     locations_pass_count += 1
                     pass
             else:
-                df = pd.read_csv('/Users/jenny/Documents/storm-events/data/raw/fatalities/' + f)
+                df = pd.read_csv('data/raw/fatalities/' + f)
                 try:
                     df.to_sql('fatalities', conn, if_exists='append', index=False)
                 except sqlite3.IntegrityError:

@@ -20,10 +20,10 @@ for c in csvs:
     res = requests.get(url + c)
     data = zlib.decompress(res.content, zlib.MAX_WBITS|32)
     if 'details' in c:
-        folder = '/Users/jenny/Documents/storm-events/data/raw/details/'
+        folder = 'data/raw/details/'
     elif 'fatalities' in c:
-        folder = '/Users/jenny/Documents/storm-events/data/raw/fatalities/'
+        folder = 'data/raw/fatalities/'
     else:
-        folder = '/Users/jenny/Documents/storm-events/data/raw/locations/'
+        folder = 'data/raw/locations/'
     with open(folder + c[:-3], 'wb') as f:
         f.write(data)

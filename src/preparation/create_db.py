@@ -1,6 +1,6 @@
 import sqlite3
 
-conn = sqlite3.connect('/Users/jenny/Documents/storm_events/data/raw/storms.db')
+conn = sqlite3.connect('data/raw/storms.db')
 c = conn.cursor()
 
 c.execute('PRAGMA foreign_keys = ON;')
