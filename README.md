@@ -9,7 +9,7 @@ First capstone project for Springboard
 1. Docs
    - [Project Proposal](https://github.com/jennyrhee/storm-events/blob/master/docs/projectproposal.pdf)  
    Discusses the goal, importance and impact, data sources, initial steps, and deliverables for the project
-   - [Storm Data Export Format](https://github.com/jennyrhee/storm-events/blob/master/docs/storm-data-export-format.pdf)  
+   - [Storm Events Data Export Format](https://github.com/jennyrhee/storm-events/blob/master/docs/storm-data-export-format.pdf)  
    Documentation provided by NOAA
    - [Global Summary of the Month Data Documentation](https://github.com/jennyrhee/storm-events/blob/master/docs/gsom-gsoy_documentation.pdf)
    - Documentation provided by NOAA
