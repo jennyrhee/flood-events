@@ -1,7 +1,7 @@
 # Predicting Severe Storm Events in Louisiana
 
-First capstone project for Springboard
-[Storm Events Data](https://www.ncdc.noaa.gov/stormevents/)
+First capstone project for Springboard  
+[Storm Events Data](https://www.ncdc.noaa.gov/stormevents/)  
 [Meteorological Data](https://data.nodc.noaa.gov/cgi-bin/iso?id=gov.noaa.ncdc:C00946)
 
 ## [Table of Contents](#table-of-contents)
