@@ -21,6 +21,6 @@ First capstone project for Springboard
    - [Preparation](https://github.com/jennyrhee/storm-events/tree/master/src/preparation)  
    Code used to download storm events files from NOAA website, create a SQLite database, and import data to database
 3. Notebooks
-   - [Data Wrangling](https://github.com/jennyrhee/storm-events/blob/master/notebooks/data_wrangling.ipynb) 
-   - [Data Storytelling](https://github.com/jennyrhee/storm-events/blob/master/notebooks/data_wrangling.ipynb) 
+   - [Data Wrangling](https://github.com/jennyrhee/storm-events/blob/master/notebooks/data_wrangling.ipynb)
+   - [Data Storytelling](https://github.com/jennyrhee/storm-events/blob/master/notebooks/data_wrangling.ipynb)  
      Exploratory data analysis and findings
