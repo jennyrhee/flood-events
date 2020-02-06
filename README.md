@@ -2,7 +2,7 @@
 
 First capstone project for Springboard  
 [Storm Events Data](https://www.ncdc.noaa.gov/stormevents/)  
-[Meteorological Data](https://data.nodc.noaa.gov/cgi-bin/iso?id=gov.noaa.ncdc:C00946)
+[Meteorological Data](https://www.ncdc.noaa.gov/cdo-web/)
 
 ## [Table of Contents](#table-of-contents)
 
@@ -15,7 +15,7 @@ First capstone project for Springboard
    Documentation provided by NOAA
    - [Storm Data Preparation and Event Type Descriptions](https://github.com/jennyrhee/storm-events/blob/master/docs/storm-data-preparation-event-types.pdf)  
    Documentation provided by NOAA
-   - [Global Summary of the Month Data Documentation](https://github.com/jennyrhee/storm-events/blob/master/docs/gsom-gsoy_documentation.pdf)  
+   - [Daily Summaries Data Documentation](https://github.com/jennyrhee/storm-events/blob/master/docs/daily-summaries-documentation.pdf)  
    Documentation provided by NOAA
 2. Source Code  
    - [Preparation](https://github.com/jennyrhee/storm-events/tree/master/src/preparation)  
