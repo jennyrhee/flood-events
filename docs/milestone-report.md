@@ -65,5 +65,5 @@ Wind speed is another interesting feature to consider (Figure 5). Coastal flood 
 
 There different methods were used to find correlation coefficients depending on the variable types being compared (Figure 8). Pearson's correlation was used for continuous vs. continuous variables [-1, 1]. Point biserial correlation was used for categorical vs. continuous variables [-1, 1]. Cramer's V was used for categorical vs. categorical variables [0, 1].
 
-![correlation matrix](img/corr_matrix.png)
+![correlation matrix](img/correlation_matrix.png)
 **Figure 6**. Correlation matrix for all features.
