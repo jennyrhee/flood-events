@@ -39,28 +39,31 @@ The station data was aggregated to represent the parish in its entirety by takin
 
 The average of hourly temperature values variable was dropped because there was a lot of missing data (~74%). For rows with null storm events data, a new event type called "None" was created indicating that no event happened on these days. There were 2,202 flood event types (Coastal Flood, Flash Flood, and Flood), but only 812 rows with complete meteorological data.
 
-5,000 samples were sampled for none events that occurred in parishes and years that a flood event occurred. A new feature representing the previous 7 day total precipitation was created. Rows were dropped if there was less than 4 previous days of data. Another feature representing region was created with possible values being Northwest, Northeast, Central, Southwest, and Southeast. Finally, a season feature was created (winter, spring, summer, fall). The final DataFrame had 5,812 rows.
+5,000 samples were sampled for none events that occurred in parishes and years that a flood event occurred. A new feature representing the previous 7-day total precipitation was created. Rows were dropped if there were less than 4 previous days of data. Another feature representing region was created with possible values being Northwest, Northeast, Central, Southwest, and Southeast. Finally, a season feature was created (winter, spring, summer, fall). The final DataFrame had 5,812 rows.
 
 ## Exploratory Analysis Summary
 
 There were 668 flash floods, 132 floods, and 11 coastal floods in the dataset (Figure 2).
+
 ![flood counts](img/flood_counts.png)
 **Figure 2**. Counts of each flood event type.
+
+Precipitation will likely be the most important feature (Figure 3). As expected, no events generally have the least amount of precipitation while flash floods have the most amount of precipitation.
 
 ![precipitation distribution](img/precip_box.png)
 **Figure 3**. Distribution of precipitation by event.
 
+Interestingly, coastal floods have the least amount of previous 7-day precipitation (Figure 4). Coastal flooding is when a coastal process (e.g., waves, tides, storm surge) produces a flood on normally dry land areas ([Source](https://www.researchgate.net/publication/259740986_Coastal_Hazards_and_Climate_Change_A_Guidance_Manual_for_Local_Government_in_New_Zealand)). Additionally, there are only 11 coastal flood events in the dataset. The small sample size and the fact that these events happen in typically dry lands could be a reason why previous 7-day precipitation is lower than no events.
+
 ![previous 7 day precipitation distribution](img/precip_7d_box.png)
 **Figure 4**. Distribution of previous 7-day precipitation by event.
+
+Wind speed is another interesting feature to consider (Figure 5). Coastal flood has a higher average wind speed than the other event types. This is intuitive because these events are caused by coastal processes such as waves, tides, and storm surges, which are strongly influenced by wind.
 
 ![wind distribution](img/wind.png)
 **Figure 5**. Distribution of wind speed by event.
 
-![max temp distribution](img/max_temp.png)
-**Figure 6**. Distribution of maximum temperature by event.
-
-![min temp distribution](img/min_temp.png)
-**Figure 7**. Distribution of minimum temperature by event.
+There different methods were used to find correlation coefficients depending on the type of feature (Figure 8). Pearson's correlation was used for continuous vs. continuous variables [-1, 1]. Point biserial correlation was used for categorical vs. continuous variables [-1, 1]. Cramer's V was used for categorical vs. categorical variables [0, 1].
 
 ![correlation matrix](img/corr_matrix.png)
-**Figure 8**. Correlation matrix for all features.
+**Figure 6**. Correlation matrix for all features.
