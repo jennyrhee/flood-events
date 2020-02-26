@@ -9,7 +9,7 @@ First capstone project for Springboard
 1. Docs
    - [Project Proposal](https://github.com/jennyrhee/storm-events/blob/master/docs/projectproposal.pdf)  
    Discusses the goal, importance and impact, data sources, initial steps, and deliverables for the project
-   - [Milestone Report](https://github.com/jennyrhee/storm-events/blob/master/docs/milestone-report.pdf)  
+   - [Milestone Report](https://github.com/jennyrhee/storm-events/blob/master/docs/milestone-report.md)  
    Report containing data wrangling and exploratory data analysis for the project
    - [Storm Events Data Export Format](https://github.com/jennyrhee/storm-events/blob/master/docs/storm-data-export-format.pdf)  
    Documentation provided by NOAA
