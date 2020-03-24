@@ -29,9 +29,9 @@ There were 16,946 rows in the final DataFrame.
 
 ### Meteorological Data
 
-There were 11 variables chosen that were thought to be variables of interest: average daily wind speed, precipitation, average of hourly temperature values, maximum temperature, minimum temperature, direction of fastest 2-minute wind, direction of fastest 5-second wind, fastest 2-minute wind speed, and fastest 5-second wind speed. The initial dataset had 214,708 rows.
+There were 11 variables chosen that were thought to be variables of interest: average daily wind speed (`avg_wind_spd`), precipitation (`precip`), maximum temperature (`max_temp`), minimum temperature (`min_temp`), fastest 2-minute wind speed (`fastest_2m_wind_spd`), and fastest 5-second wind speed (`fastest_5s_wind_spd`). The initial dataset had 214,708 rows.
 
-A new DataFrame was created with name, latitude, and longitude from the original DataFrame, and duplicates were dropped. Using multi-processing (`pandarallel`), the coordinates2politics API was used to query for each parish based on the coordinates of each station. This DataFrame was merged with the original DataFrame, and the station and elevation columns were dropped.
+A new DataFrame was created with name, latitude, and longitude from the original DataFrame, and duplicates were dropped. Using multi-processing (`pandarallel` library), the coordinates2politics API was used to query for each parish based on the coordinates of each station. This DataFrame was merged with the original DataFrame, and the station and elevation columns were dropped.
 
 The station data was aggregated to represent the parish in its entirety by taking the mean of all data points for stations within each station for each date. This resulted in 162,229 rows. This DataFrame was merged with the storm events DataFrame.
 
@@ -63,7 +63,7 @@ Wind speed is another interesting feature to consider (Figure 5). Coastal flood 
 ![wind distribution](img/wind.png)
 **Figure 5**. Distribution of wind speed by event.
 
-There different methods were used to find correlation coefficients depending on the variable types being compared (Figure 8). Pearson's correlation was used for continuous vs. continuous variables [-1, 1]. Point biserial correlation was used for categorical vs. continuous variables [-1, 1]. Cramer's V was used for categorical vs. categorical variables [0, 1].
+There different methods were used to find correlation coefficients depending on the variable types being compared (Figure 8). Pearson's correlation was used for continuous vs. continuous variables [-1, 1]. Point biserial correlation was used for categorical vs. continuous variables [-1, 1]. Cramer's V was used for categorical vs. categorical variables [0, 1]. The grey area indicates relationships that are with themselves (e.g., avg_wind_spd vs. avg_wind_spd, etc.) or relationships that are nonsensical (e.g., region vs. season, etc.).
 
 ![correlation matrix](img/corr_matrix.png)
 **Figure 6**. Correlation matrix for all features.
