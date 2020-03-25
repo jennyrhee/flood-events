@@ -53,8 +53,8 @@ For the following, one-way ANOVA tests were used to compare differences between 
 ![precipitation distribution](img/precip_box.png)
 **Figure 3**. Distribution of precipitation by event.
 
-**One-way ANOVA Test:**
-F-value = 2565.98
+**One-way ANOVA Test:**  
+F-value = 2565.98  
 p-value < 0.001
 
 | group 1 | group 2 | meandiff | lower | upper |
@@ -63,7 +63,7 @@ p-value < 0.001
 | Coastal Flood | None | -0.88 | -1.51 | -0.25 |
 | Flash Flood | Flood | -1.72 | -1.92 | -1.52 |
 | Flash Flood | None | -2.91 | -3.00 | -2.83 |
-| Flood | None | -1.19 | -1.37 | -1.01 | 
+| Flood | None | -1.19 | -1.37 | -1.01 |  
 
 **Table 1**. Tukey's test results for precipitation (significant only).
 
@@ -82,16 +82,16 @@ Precipitation will likely be the most important feature (Figure 3). As expected,
 ![previous 7 day precipitation distribution](img/precip_7d_box.png)
 **Figure 4**. Distribution of previous 7-day precipitation by event.
 
-**One-way ANOVA Test:**
-F-value = 125.78
-p-value < 0.001
+**One-way ANOVA Test:**  
+F-value = 125.78  
+p-value < 0.001  
 
 | group 1 | group 2 | meandiff | lower | upper |
 | --- | --- | --- | --- | --- |
 | Coastal Flood | Flood | 6.40 | 2.61 | 10.20 |
 | Flash Flood | Flood | 2.77 | 1.62 | 3.92 |
 | Flash Flood | None | -2.77 | -3.34 | -2.34 |
-| Flood | None | -1.19 | -1.37 | -1.01 | 
+| Flood | None | -1.19 | -1.37 | -1.01 |  
 
 **Table 2**. Tukey's test results for previous 7 day precipitation (significant only).
 
@@ -104,9 +104,9 @@ Coastal flooding is when a coastal process (e.g., waves, tides, storm surge) pro
 ![wind distribution](img/wind.png)
 **Figure 5**. Distribution of wind speed by event.
 
-**One-way ANOVA Test:**
-F-value = 102.07
-p-value < 0.001
+**One-way ANOVA Test:**  
+F-value = 102.07  
+p-value < 0.001  
 
 | group 1 | group 2 | meandiff | lower | upper |
 | --- | --- | --- | --- | --- |
@@ -114,7 +114,7 @@ p-value < 0.001
 | Coastal Flood | Flood | -7.22 | -9.97 | -4.46 |
 | Coastal Flood | None | -7.96 | -10.61 | -5.31 |
 | Flash Flood | Flood | -1.48 | -2.32 | -0.65 |
-| Flash Flood | None | -2.22 | -2.58 | -1.86 | 
+| Flash Flood | None | -2.22 | -2.58 | -1.86 |  
 
 **Table 3**. Tukey's test results for average wind speed (significant only).
 
@@ -135,14 +135,14 @@ There different methods were used to find correlation coefficients depending on 
 
 #### min_temp
 
-**One-way ANOVA Test:**
-F-value = 42.28
-p-value < 0.001
+**One-way ANOVA Test:**  
+F-value = 42.28  
+p-value < 0.001  
 
 | group 1 | group 2 | meandiff | lower | upper |
 | --- | --- | --- | --- | --- |
 | Flash Flood | Flood | -4.66 | -8.12 | -1.21 |
-| Flash Flood | None | -6.49 | -7.98 | -4.99 | 
+| Flash Flood | None | -6.49 | -7.98 | -4.99 |  
 
 **Table 4**. Tukey's test results for minimum temperature (significant only).
 
