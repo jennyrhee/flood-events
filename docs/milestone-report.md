@@ -43,27 +43,27 @@ The average of hourly temperature values variable was dropped because there was 
 
 ## Exploratory Analysis Summary
 
-There were 668 flash floods, 132 floods, and 11 coastal floods in the dataset (Figure 2).
-
 ![flood counts](img/flood_counts.png)
 **Figure 2**. Counts of each flood event type.
 
-Precipitation will likely be the most important feature (Figure 3). As expected, no events generally have the least amount of precipitation while flash floods have the most amount of precipitation.
+There were 668 flash floods, 132 floods, and 11 coastal floods in the dataset (Figure 2).
 
 ![precipitation distribution](img/precip_box.png)
 **Figure 3**. Distribution of precipitation by event.
 
-Interestingly, coastal floods have the least amount of previous 7-day precipitation (Figure 4). Coastal flooding is when a coastal process (e.g., waves, tides, storm surge) produces a flood on normally dry land areas ([Source](https://www.researchgate.net/publication/259740986_Coastal_Hazards_and_Climate_Change_A_Guidance_Manual_for_Local_Government_in_New_Zealand)). Additionally, there are only 11 coastal flood events in the dataset. The small sample size and the fact that these events happen in typically dry lands could be a reason why previous 7-day precipitation is lower than no events.
+Precipitation will likely be the most important feature (Figure 3). As expected, no events generally have the least amount of precipitation while flash floods have the most amount of precipitation.
 
 ![previous 7 day precipitation distribution](img/precip_7d_box.png)
 **Figure 4**. Distribution of previous 7-day precipitation by event.
 
-Wind speed is another interesting feature to consider (Figure 5). Coastal flood has a higher average wind speed than the other event types. This is intuitive because these events are caused by coastal processes such as waves, tides, and storm surges, which are strongly influenced by wind.
+Interestingly, coastal floods have the least amount of previous 7-day precipitation (Figure 4). Coastal flooding is when a coastal process (e.g., waves, tides, storm surge) produces a flood on normally dry land areas ([Source](https://www.researchgate.net/publication/259740986_Coastal_Hazards_and_Climate_Change_A_Guidance_Manual_for_Local_Government_in_New_Zealand)). Additionally, there are only 11 coastal flood events in the dataset. The small sample size and the fact that these events happen in typically dry lands could be a reason why previous 7-day precipitation is lower than no events.
 
 ![wind distribution](img/wind.png)
 **Figure 5**. Distribution of wind speed by event.
 
-There different methods were used to find correlation coefficients depending on the variable types being compared (Figure 8). Pearson's correlation was used for continuous vs. continuous variables [-1, 1]. Point biserial correlation was used for categorical vs. continuous variables [-1, 1]. Cramer's V was used for categorical vs. categorical variables [0, 1]. The grey area indicates relationships that are with themselves (e.g., avg_wind_spd vs. avg_wind_spd, etc.) or relationships that are nonsensical (e.g., region vs. season, etc.).
+Wind speed is another interesting feature to consider (Figure 5). Coastal flood has a higher average wind speed than the other event types. This is intuitive because these events are caused by coastal processes such as waves, tides, and storm surges, which are strongly influenced by wind.
 
 ![correlation matrix](img/corr_matrix.png)
 **Figure 6**. Correlation matrix for all features.
+
+There different methods were used to find correlation coefficients depending on the variable types being compared (Figure 8). Pearson's correlation was used for continuous vs. continuous variables [-1, 1]. Point biserial correlation was used for categorical vs. continuous variables [-1, 1]. Cramer's V was used for categorical vs. categorical variables [0, 1]. The grey area indicates relationships that are with themselves (e.g., `avg_wind_spd` vs. `avg_wind_spd`, etc.), relationships that are nonsensical (e.g., region vs. season, etc.), or repeating values (e.g., `prcp` vs. `avg_wind_spd` shown only once).
