@@ -48,22 +48,106 @@ The average of hourly temperature values variable was dropped because there was 
 
 There were 668 flash floods, 132 floods, and 11 coastal floods in the dataset (Figure 2).
 
+For the following, one-way ANOVA tests were used to compare differences between event means for each meteorological feature, and Tukey's tests were used to identify to what extent.
+
 ![precipitation distribution](img/precip_box.png)
 **Figure 3**. Distribution of precipitation by event.
 
-Precipitation will likely be the most important feature (Figure 3). As expected, no events generally have the least amount of precipitation while flash floods have the most amount of precipitation.
+**One-way ANOVA Test:**
+F-value = 2565.98
+p-value < 0.001
+
+| group 1 | group 2 | meandiff | lower | upper |
+| --- | --- | --- | --- | --- |
+| Coastal Flood | Flash Flood | 2.03 | 1.39 | 2.66 |
+| Coastal Flood | None | -0.88 | -1.51 | -0.25 |
+| Flash Flood | Flood | -1.72 | -1.92 | -1.52 |
+| Flash Flood | None | -2.91 | -3.00 | -2.83 |
+| Flood | None | -1.19 | -1.37 | -1.01 |
+**Table 1**. Tukey's test results for precipitation (significant only).
+
+Precipitation will likely be the most important feature (Figure 3). As expected, "none" events generally had the least amount of precipitation (Table 1):
+
+- $\mu_{none} - \mu_{coastal} = -0.88$
+- $\mu_{none} - \mu_{flash} = -2.91$
+- $\mu_{none} - \mu_{flood} = -1.19$
+  
+...while flash floods had the most amount of precipitation:
+
+- $\mu_{flash} - \mu_{coastal} = 2.03$
+- $\mu_{flash} - \mu_{flood} = 1.72$
+- $\mu_{flash} - \mu_{none} = 2.91$
 
 ![previous 7 day precipitation distribution](img/precip_7d_box.png)
 **Figure 4**. Distribution of previous 7-day precipitation by event.
 
-Interestingly, coastal floods have the least amount of previous 7-day precipitation (Figure 4). Coastal flooding is when a coastal process (e.g., waves, tides, storm surge) produces a flood on normally dry land areas ([Source](https://www.researchgate.net/publication/259740986_Coastal_Hazards_and_Climate_Change_A_Guidance_Manual_for_Local_Government_in_New_Zealand)). Additionally, there are only 11 coastal flood events in the dataset. The small sample size and the fact that these events happen in typically dry lands could be a reason why previous 7-day precipitation is lower than no events.
+**One-way ANOVA Test:**
+F-value = 125.78
+p-value < 0.001
+
+| group 1 | group 2 | meandiff | lower | upper |
+| --- | --- | --- | --- | --- |
+| Coastal Flood | Flood | 6.40 | 2.61 | 10.20 |
+| Flash Flood | Flood | 2.77 | 1.62 | 3.92 |
+| Flash Flood | None | -2.77 | -3.34 | -2.34 |
+| Flood | None | -1.19 | -1.37 | -1.01 |
+**Table 2**. Tukey's test results for previous 7 day precipitation (significant only).
+
+Interestingly, coastal floods seem to have the least amount of previous 7-day precipitation (Figure 4; Table 2):
+
+- $\mu_{coastal} - \mu_{flood} = -6.40$
+
+Coastal flooding is when a coastal process (e.g., waves, tides, storm surge) produces a flood on normally dry land areas ([Source](https://www.researchgate.net/publication/259740986_Coastal_Hazards_and_Climate_Change_A_Guidance_Manual_for_Local_Government_in_New_Zealand)). Additionally, there are only 11 coastal flood events in the dataset. The small sample size and the fact that these events happen in typically dry lands could be a reason why previous 7-day precipitation is lower than no events.
 
 ![wind distribution](img/wind.png)
 **Figure 5**. Distribution of wind speed by event.
 
-Wind speed is another interesting feature to consider (Figure 5). Coastal flood has a higher average wind speed than the other event types. This is intuitive because these events are caused by coastal processes such as waves, tides, and storm surges, which are strongly influenced by wind.
+**One-way ANOVA Test:**
+F-value = 102.07
+p-value < 0.001
+
+| group 1 | group 2 | meandiff | lower | upper |
+| --- | --- | --- | --- | --- |
+| Coastal Flood | Flash Flood | -5.74 | -8.41 | -3.07 |
+| Coastal Flood | Flood | -7.22 | -9.97 | -4.46 |
+| Coastal Flood | None | -7.96 | -10.61 | -5.31 |
+| Flash Flood | Flood | -1.48 | -2.32 | -0.65 |
+| Flash Flood | None | -2.22 | -2.58 | -1.86 |
+**Table 3**. Tukey's test results for average wind speed (significant only).
+
+Wind speed is another interesting feature to consider (Figure 5). Coastal flood has a higher average wind speed than the other event types (Table 3):
+
+- $\mu_{coastal} - \mu_{flash} = 5.74$
+- $\mu_{coastal} - \mu_{flood} = 7.22$
+- $\mu_{coastal} - \mu_{none} = 7.96$
+
+This is intuitive because these events are caused by coastal processes such as waves, tides, and storm surges, which are strongly influenced by wind.
 
 ![correlation matrix](img/corr_matrix.png)
 **Figure 6**. Correlation matrix for all features.
 
 There different methods were used to find correlation coefficients depending on the variable types being compared (Figure 8). Pearson's correlation was used for continuous vs. continuous variables [-1, 1]. Point biserial correlation was used for categorical vs. continuous variables [-1, 1]. Cramer's V was used for categorical vs. categorical variables [0, 1]. The grey area indicates relationships that are with themselves (e.g., `avg_wind_spd` vs. `avg_wind_spd`, etc.), relationships that are nonsensical (e.g., region vs. season, etc.), or repeating values (e.g., `prcp` vs. `avg_wind_spd` shown only once).
+
+### Other One-way ANOVA and Tukey's Tests
+
+#### min_temp
+
+**One-way ANOVA Test:**
+F-value = 42.28
+p-value < 0.001
+
+| group 1 | group 2 | meandiff | lower | upper |
+| --- | --- | --- | --- | --- |
+| Flash Flood | Flood | -4.66 | -8.12 | -1.21 |
+| Flash Flood | None | -6.49 | -7.98 | -4.99 |
+**Table 4**. Tukey's test results for minimum temperature (significant only).
+
+#### max_temp
+
+**One-way ANOVA Test:**
+F-value = 2.12
+p-value = 0.096
+
+# Next Steps
+
+The final report will include steps into building the model. The goal is to build a binary model that classifies if there is a flood or not. If time permits, there is potential to build a multinomial model to further classify if a confirmed flood event is a flash flood, coastal flood, or flood. However, we would likely have to exclude coastal floods because the sample size of coastal floods in the dataset is significantly smaller than the other types of flood events.
