@@ -14,7 +14,7 @@ The goal of this capstone project is to predict flood events in Louisiana. Build
 
 The National Weather Service provides [storm data](https://catalog.data.gov/dataset/ncdc-storm-events-database) containing statistics on personal injuries and damage estimates from 1950 to present. There are 34 different storm events including various types of floods, hurricanes, thunderstorms, hail, etc. There are 51 columns including damage, injuries, deaths, etc. I used [Python scripts](https://github.com/jennyrhee/storm-events/tree/master/src/preparation) to download all 213 csv files, create a database, and injest the data into the database. Additional supporting data includes historical meteorological data to analyze any potential correlations. NOAA's National Centers for Environmental Information has [Daily Summaries](https://www.ncdc.noaa.gov/cdo-web/datatools/findstation/) data at numerous stations across the United States (Figure 1). This data included air temperature, precipitation, and wind speed.
 
-![](img/stations.png)
+![stations](img/stations.png)
 **Figure 1**. Locations of weather stations in Louisiana.
 
 ## Data Cleaning Summary
@@ -152,6 +152,6 @@ p-value < 0.001
 F-value = 2.12
 p-value = 0.096
 
-# Next Steps
+## Next Steps
 
 The final report will include steps into building the model. The goal is to build a binary model that classifies if there is a flood or not. If time permits, there is potential to build a multinomial model to further classify if a confirmed flood event is a flash flood, coastal flood, or flood. However, we would likely have to exclude coastal floods because the sample size of coastal floods in the dataset is significantly smaller than the other types of flood events.
