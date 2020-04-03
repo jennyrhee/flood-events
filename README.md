@@ -1,4 +1,4 @@
-# Predicting Severe Storm Events in Louisiana
+# Predicting Flood Events in Louisiana
 
 First capstone project for Springboard  
 [Storm Events Data](https://www.ncdc.noaa.gov/stormevents/)  
@@ -24,3 +24,4 @@ First capstone project for Springboard
    - [Data Wrangling](https://github.com/jennyrhee/storm-events/blob/master/notebooks/data_wrangling.ipynb)
    - [Data Storytelling](https://github.com/jennyrhee/storm-events/blob/master/notebooks/data_storytelling.ipynb)  
      Exploratory data analysis and findings
+   - [Machine Learning](https://github.com/jennyrhee/storm-events/blob/master/notebooks/machine-learning.ipynb)
