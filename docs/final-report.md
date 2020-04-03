@@ -8,21 +8,21 @@ By Jenny Rhee
 
 ## Table of Contents
 
-1. [Problem Statement](#1-problem-statement)
-2. [Data](#2-data)
-3. [Data Cleaning Summary](#3-data-cleaning-summary)
-    3.1 [Storm Events Data](#31-storm-events-data)
-    3.2 [Meteorological Data](#32-meteorological-data)
-    3.3 [Combined Storm Events and Meteorological DataFrame](#33-combined-storm-events-and-meteorological-dataframe)
-4. [Exploratory Analysis Summary](#4-exploratory-analysis-summary)
-5. [Flood Classification](#5-flood-classification)
-    5.1 [Data Preparation](#51-data-preparation)
-    5.2 [Model Selection](#52-model-selection)
-    5.3 [Model Fitting and Results](#53-model-fitting-and-results)
-        5.3.1 [Logistic Regression](#531-logistic-regression)
-        5.3.1 [Random Forest](#532-random-forest)
-6. [Conclusion](#6-conclusion)
-   6.1 [Future Direction](#61-future-direction)
+1. [Problem Statement](#1-problem-statement)  
+2. [Data](#2-data)  
+3. [Data Cleaning Summary](#3-data-cleaning-summary)  
+    3.1 [Storm Events Data](#31-storm-events-data)  
+    3.2 [Meteorological Data](#32-meteorological-data)  
+    3.3 [Combined Storm Events and Meteorological DataFrame](#33-combined-storm-events-and-meteorological-dataframe)  
+4. [Exploratory Analysis Summary](#4-exploratory-analysis-summary)  
+5. [Flood Classification](#5-flood-classification)  
+    5.1 [Data Preparation](#51-data-preparation)  
+    5.2 [Model Selection](#52-model-selection)  
+    5.3 [Model Fitting and Results](#53-model-fitting-and-results)  
+        5.3.1 [Logistic Regression](#531-logistic-regression)  
+        5.3.1 [Random Forest](#532-random-forest)  
+6. [Conclusion](#6-conclusion)  
+   6.1 [Future Direction](#61-future-direction)  
 
 ## 1. Problem Statement
 
