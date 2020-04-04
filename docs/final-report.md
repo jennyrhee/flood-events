@@ -24,7 +24,7 @@ By Jenny Rhee
 
 ## 1. Problem Statement
 
-The goal of this capstone project is to predict flood events in Louisiana. Building this model can potentially assist cities and the general population in preparation for flooding. People will likely have experience with flooding, but the prevalence is expected to increase with climate change. It is important to begin understanding the rising trends.
+The goal of this capstone project is to classify flood events in Louisiana. People will likely have experience with flooding, but the prevalence is expected to increase with climate change. It is important to begin understanding the rising trends. Building this model can classify existing weather data with missing flood event labels as a precursor to building a predictive model. The importance of this is the capability to efficiently label a large data set. Flood event data collection began in 1996, but there is significantly more meteorological data available that can be labeled using this model in order to expand the data set to train a predictive model in the future.
 
 ## 2. Data
 
@@ -289,4 +289,4 @@ In terms of our business decision of optimizing recall, the random forest perfor
 
 ### 6.1. Future Direction
 
-The natural next step is to implement a multinomial model that can predict the type of flood event detected (e.g., Coastal Flood vs. Flash Flood vs. Flood, etc.). The binary model is fairly basic, and the ultimate goal would be to predict future flood events. This is an exceptionally difficult problem that many people have tried to solve. Future efforts would also include exploring additional features to strengthen the possibility of building a predictive model.
+The natural next step is to implement a multinomial model that can predict the type of flood event detected (e.g., Coastal Flood vs. Flash Flood vs. Flood, etc.). The binary model is important to begin labeling our much larger meteorological data set, but the ultimate goal is to predict future flood events. This is an exceptionally difficult problem that many people have tried to solve. Future efforts would specifically include adding labels to the data set where they are missing and exploring additional features to strengthen the possibility of building a predictive model.
