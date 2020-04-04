@@ -1,4 +1,4 @@
-# Predicting Flood Events in Louisiana
+# Classifying Flood Events in Louisiana
 
 First capstone project for Springboard  
 [Storm Events Data](https://www.ncdc.noaa.gov/stormevents/)  
@@ -7,10 +7,8 @@ First capstone project for Springboard
 ## [Table of Contents](#table-of-contents)
 
 1. Docs
-   - [Project Proposal](https://github.com/jennyrhee/storm-events/blob/master/docs/projectproposal.pdf)  
-   Discusses the goal, importance and impact, data sources, initial steps, and deliverables for the project
-   - [Milestone Report](https://github.com/jennyrhee/storm-events/blob/master/docs/milestone-report.md)  
-   Report containing data wrangling and exploratory data analysis for the project
+   - [Final Report](https://github.com/jennyrhee/flood-events/blob/master/docs/final-report.md)  
+   Report containing data wrangling, exploratory data analysis, and machine learning explanation for the project
    - [Storm Events Data Export Format](https://github.com/jennyrhee/storm-events/blob/master/docs/storm-data-export-format.pdf)  
    Documentation provided by NOAA
    - [Storm Data Preparation and Event Type Descriptions](https://github.com/jennyrhee/storm-events/blob/master/docs/storm-data-preparation-event-types.pdf)  
