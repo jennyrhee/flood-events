@@ -170,7 +170,7 @@ p-value = 0.096
 
 ## 5. Flood Classification
 
-This modeling task was to predict whether or not a flood event occurred, which is a binary classification (supervised learning) problem. The feature categories were meteorological, regional, and seasonal variables.
+This modeling task was to classify whether or not a flood event occurred, which is a binary classification (supervised learning) problem. The feature categories were meteorological, regional, and seasonal variables.
 
 ### 5.1. Data Preparation
 
