@@ -1,4 +1,4 @@
-# Predicting flood events in Louisiana
+# Classifying flood events in Louisiana
 
 Springboard Capstone 1 Final Report
 
