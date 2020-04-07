@@ -258,7 +258,7 @@ The confusion matrix from the final random forest model can be found in Table 9,
 ![rf-roc](img/roc-rf.png)
 **Figure 8**. ROC curve for the final random forest model.
 
-The final step was optimizing threshold to obtain a higher f-2 score. The optimal threshold was 0.241, and the best f-2 score was 0.839. The ROC-AUC score was 0.9696.
+The final step was optimizing the threshold with the goal of obtaining a higher f-2 score. The optimal threshold was 0.241, and the best f-2 score was 0.839. The ROC-AUC score was 0.9696.
 
 | feature | importance |
 | --- | --- |
@@ -281,11 +281,11 @@ The final step was optimizing threshold to obtain a higher f-2 score. The optima
 
 **Table 11**. Feature importances determined by the random forest model.
 
-The feature importances can be found in Table 11. As expected, precipitation was by far the most importance feature (0.610 vs. 0.084 for fastest 5 sec wind speed in second place). The least important features for the model were seasonal and regional.
+The feature importances can be found in Table 11. As expected, precipitation was by far the most important feature (0.610 vs. 0.084 for fastest 5 sec wind speed in second place). The least important features for the model were seasonal and regional.
 
 ## 6. Recommendation
 
-In terms of our business decision of optimizing recall, the random forest performed the best with f-2 score = 0.839 vs. logistic regression f-2 score = 0.836. Being that we want to minimize overlooking flood events, I would recommend implementing a random forest classification model.
+In terms of our business decision of optimizing recall, the random forest performed the best with f-2 score = 0.839 vs. logistic regression f-2 score = 0.836. Being that we want to minimize false negatives (i.e., overlooking flood events), I would recommend implementing a random forest classification model.
 
 ### 6.1. Future Direction
 
