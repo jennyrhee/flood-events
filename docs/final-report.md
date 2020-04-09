@@ -253,12 +253,12 @@ The confusion matrix from the final logistic regression model can be found in Ta
 
 The three data sets described earlier (unprocessed, scaled, and standardized) were used to train three different models and compare performance. The unprocessed data performed the best and was used to train the final model (Table 8).
 
-[rf-roc](img/roc-rf.png)
+![rf-roc](img/roc-rf.png)
 **Figure 9**. ROC curve for the final random forest model.
 
 The hyperparameters for the model were optimized using a grid search; the best parameters were `min_samples_leaf` = 0.001 and `min_samples_split` = 0.001. The ROC-AUC score was 0.9696 (Figure 9).
 
-[threshold-rf](img/threshold-rf.png)
+![threshold-rf](img/threshold-rf.png)
 **Figure 10**. Threshold curve for the final random forest model.
 
 The final step was choosing what threshold probability should be used to optimize the F-2 score. The optimal threshold was 0.241, and the best F-2 score was 0.839 (Figure 10).
@@ -282,7 +282,7 @@ The final step was choosing what threshold probability should be used to optimiz
 
 The confusion matrix from the final random forest model can be found in Table 9, and the classification report can be found in Table 10.
 
-[feature-importances](img/feature-importances.png)
+![feature-importances](img/feature-importances.png)
 
 **Figure 11**. Feature importances determined by the random forest model.
 
