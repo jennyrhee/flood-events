@@ -10,7 +10,7 @@ By Jenny Rhee
 
 1. [Introduction](#1-introduction)  
    2.1. [Problem Statement](#11-problem-statement)  
-   2.2. [Client](#12-client-profile)  
+   2.2. [Client Profile](#12-client-profile)  
 2. [Data](#2-data)  
 3. [Data Cleaning Summary](#3-data-cleaning-summary)  
     3.1. [Storm Events Data](#31-storm-events-data)  
