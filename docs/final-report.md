@@ -35,7 +35,7 @@ Even with floods that are not as catastrophic as the 2016 flood, minor flood eve
 
 ### 1.2. Client Profile
 
-The National Oceanic and Atmospheric Administration’s (NOAA) agency, the National Weather Service (NWS), has a mission to provide weather, water, and climate data, forecasts, and warnings for the protection of life and property and enhancement of the national economy. Their ultimate vision is to create a weather-ready nation: a society that is prepared for and responds to weather, water, and climate-dependent events. This model will help stakeholders save lives and potentially minimize property damage, striving to achieve their vision.
+The National Oceanic and Atmospheric Administration’s (NOAA) agency, the National Weather Service (NWS), has a mission to provide weather, water, and climate data, forecasts, and warnings for the protection of life and property and enhancement of the national economy. Their ultimate vision is to create a weather-ready nation: a society that is prepared for and responds to weather, water, and climate-dependent events. This model will help stakeholders save lives and possibly minimize property damage by giving them a tool to predict flood events. This can be used to alert civilians and advise them on what steps to take depending on the intensity of the flood, as well as make necessary preparations, such as providing sandbags.
 
 ## 2. Data
 
@@ -198,7 +198,7 @@ Two classification algorithms were used: logistic regression (`LogisticRegressio
 
 #### 5.3.1. Metric Choice
 
-Choosing which metric to optimize is essentially a business decision. Once the metric is chosen, it is optimized with various threshold probabilities; by default, it is arbitrarily set to 0.5. F-β score is a way of measuring accuracy in a model by taking into account both precision and recall. Precision is a metric that calculates the percentage of correct predictions for the positive class, while recall calculates the percentage of correct predictions for the positive class out of all positive predictions that could be made (Source). β can be configured to give more weight to precision or recall. Ultimately, a decision was made to optimize for β = 2, which puts twice as much emphasis on recall. The advantage of this β-value is that the model will find more actual flood events. However, the disadvantage is the model will more likely label an event as a flood event when this may not be the case. This tradeoff is more ideal than the alternative because we would rather not miss any true flood events.
+Choosing which metric to optimize is essentially a business decision. Once the metric is chosen, it is optimized with various threshold probabilities; by default, it is arbitrarily set to 0.5. F-β score is a way of measuring accuracy in a model by taking into account both precision and recall. Precision is a metric that calculates the percentage of correct predictions for the positive class, while recall calculates the percentage of correct predictions for the positive class out of all positive predictions that could be made (Source). β can be configured to give more weight to precision or recall. Ultimately, a decision was made to optimize for β = 2, which puts twice as much emphasis on recall. The advantage of this β-value is that the model will find more actual flood events. However, the disadvantage is the model will more likely label an event as a flood event when this may not be the case. This tradeoff is more ideal than the alternative because we would rather not miss any true flood events in order to mitigate potential damages if possible.
 
 #### 5.3.2. Logistic Regression
 
@@ -290,7 +290,7 @@ The feature importances can be found in Figure 11. As expected, precipitation wa
 
 ## 6. Recommendation
 
-The random forest performed the best with F-2 score = 0.839 vs. logistic regression’s F-2 score = 0.836. As expected, precipitation is the most important feature in classifying a flood event, followed by the fastest 2-minute and 5-second wind speeds. I would recommend implementing a random forest classification model and run the model multiple times daily with updated forecast data. The forecast data will likely become more accurate as the day continues. The model can be monitored or actions can be taken based on the predictions throughout the day.
+The random forest performed the best with F-2 score = 0.839 vs. logistic regression’s F-2 score = 0.836. As expected, precipitation is the most important feature in classifying a flood event, followed by the fastest 2-minute and 5-second wind speeds. I would recommend implementing a random forest classification model and run the model multiple times daily with updated forecast data. The forecast data will likely become more accurate as the day continues. The model can be monitored or actions can be taken based on the predictions throughout the day. NWS can alert potentially affected civilians to move valuables to higher elevations, stock up on essentials such as food, water, and flashlights, and/or make plans to evacuate.
 
 ## 7. Future Direction
 
